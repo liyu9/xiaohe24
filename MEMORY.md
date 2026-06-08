@@ -35,3 +35,14 @@ openclaw gateway (6-06 主人装的同类 hermes): `openclaw` CLI v2026.6.1, 飞
 ⑧ openviking-server PID 3125442（6-05 起跑在 127.0.0.1:8765），ov.conf 在 ~/.openviking/ov.conf
 ⑨ 飞书过敏药表: app_token=KerrbfdBwayjGHsbdTbcFyjXnIc, table_id=tbl4jspvR2fR3xcx
 ⑩ OpenViking memory provider 启用三步未做（等主人批）：写 OPENVIKING_ENDPOINT → config memory.provider=openviking → 重启 gateway
+§
+6-08 搭好 A 股盯盘系统 (星耀提醒):
+- 脚本 ~/.hermes/scripts/stock-watch.py (intraday 盘中 / close 收盘两种模式)
+- 行情源 qt.gtimg.cn 批量 50 条一次拉, GBK
+- 标的代码查询: eastmoney searchapi (token D43BF722C8E33BDC906FB84D85E326E8)
+- 推送走 hermes send -t weixin -f <tmpfile> (subprocess.Popen 异步, 不等返回)
+- 防骚扰: state.json 同票同档每天 1 次
+- cron: 674851dd76b6 盘中 */3 9-15 1-5, cf7105eb1042 收盘 30 15 1-5
+- 标的: 7 只 ETF + 47 只个股 (含 9 只 T 票), 行云科技=sz300209, 创业板ETF=sz159205 东财
+- skill: ~/.hermes/skills/stock-watch/SKILL.md
+- 易踩坑: hermes send 走 os.system 会卡死必须 Popen, field 47/48 是涨跌停标记, 行云科技新名 (旧名天泽信息)
