@@ -46,3 +46,5 @@ openclaw gateway (6-06 主人装的同类 hermes): `openclaw` CLI v2026.6.1, 飞
 - 标的: 7 只 ETF + 47 只个股 (含 9 只 T 票), 行云科技=sz300209, 创业板ETF=sz159205 东财
 - skill: ~/.hermes/skills/stock-watch/SKILL.md
 - 易踩坑: hermes send 走 os.system 会卡死必须 Popen, field 47/48 是涨跌停标记, 行云科技新名 (旧名天泽信息)
+§
+**hermes-daily-report 推送被微信限流**（6-10 18:00 报"delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited"）。脚本本身跑成功（last_status=ok），只是 iLink 推送通道限流。**实际后果**：主人可能没收到 18 点那班日报。**应对**：被限流时考虑走飞书/本地 fallback，或加 retry。但**别擅自改主人的 cron 任务**——要先告诉主人等指令。
