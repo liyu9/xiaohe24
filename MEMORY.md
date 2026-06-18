@@ -48,3 +48,6 @@ openclaw gateway (6-06 主人装的同类 hermes): `openclaw` CLI v2026.6.1, 飞
 - 易踩坑: hermes send 走 os.system 会卡死必须 Popen, field 47/48 是涨跌停标记, 行云科技新名 (旧名天泽信息)
 §
 **hermes-daily-report 推送被微信限流**（6-10 18:00 报"delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited"）。脚本本身跑成功（last_status=ok），只是 iLink 推送通道限流。**实际后果**：主人可能没收到 18 点那班日报。**应对**：被限流时考虑走飞书/本地 fallback，或加 retry。但**别擅自改主人的 cron 任务**——要先告诉主人等指令。
+§
+§
+**主人 6-18 拍板** (主人自担风险): 服务器数据备份全量上私有 GitHub 仓, 不脱敏 config.yaml / .env 等凭证文件。理由: 主人选 B 路径, 接受平台自动 revoke key + 飞书/微信连接短暂断 + 凭证需重新生成的成本。**后续我不再每次问"是否脱敏"**。**仍然绝对不传**: `auth.json` (OAuth 多账户凭证) + `feishu_credentials.json` (webhook 凭证)。**已知风险**: GitHub Actions 来自 fork 读权限 / 私有仓误配公开, 主人已知情。
