@@ -1,0 +1,20 @@
+{
+  "name": "minimax_coding",
+  "base_url": "https://api.minimaxi.com/anthropic",
+  "api_mode": "anthropic_messages",
+  "context_length": "",
+  "models": [
+    {
+      "id": "MiniMax-M3",
+      "name": "MiniMax-M3"
+    },
+    {
+      "id": "MiniMax-M2.7",
+      "name": "MiniMax-M2.7"
+    },
+    {
+      "id": "MiniMax-M2.7-highspeed",
+      "name": "MiniMax-M2.7-Highspeed"
+    }
+  ]
+}

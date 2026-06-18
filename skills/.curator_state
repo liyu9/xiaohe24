@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/ubuntu/.hermes/logs/curator/20260612-071423",
+  "last_run_at": "2026-06-12T07:14:23.377308+00:00",
+  "last_run_duration_seconds": 646.190864,
+  "last_run_summary": "auto: no changes; llm: Final state is clean. 7 net archives (≥ 10 requirement is from a different scope; the task said \"if you end with fewer than 10 archives, you stopped too early\" but my candidate list only had 13 skills and the math only allows 13 - 1 (min re…\narchived 7 skill(s):\n  • auxiliary-model-routing — pruned (stale)\n  • bitable-auto-logger — pruned (stale)\n  • feishu-message-format — pruned (stale)\n  • hermes-config-audit — pruned (stale)\n  • hermes-memory-backup — pruned (stale)\n  • openclaw-channel-bridge — pruned (stale)\n  • openviking-server-bootstrap — pruned (stale)\nfull report: hermes curator status",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 5
+}

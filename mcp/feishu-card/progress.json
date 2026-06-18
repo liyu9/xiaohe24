@@ -1,0 +1,22 @@
+{
+  "_description": "任务进度卡片（蓝色 header + 步骤列表 + 当前状态）。变量：{TITLE}/{CURRENT_STEP}/{TOTAL_STEPS}/{STEPS_LIST}/{STATUS}/{TIME}。",
+  "msg_type": "interactive",
+  "card": {
+    "config": {"wide_screen_mode": true},
+    "header": {
+      "title": {"content": "🔄 {TITLE}", "tag": "plain_text"},
+      "template": "blue"
+    },
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "**当前状态：** <font color='blue'>{STATUS}</font>\n**进度：** {CURRENT_STEP}/{TOTAL_STEPS}\n**开始时间：** {TIME}"
+      },
+      {"tag": "hr"},
+      {
+        "tag": "markdown",
+        "content": "**执行步骤：**\n{STEPS_LIST}"
+      }
+    ]
+  }
+}

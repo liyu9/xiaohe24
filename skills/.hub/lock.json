@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "installed": {
+    "wechat-article-extractor": {
+      "source": "clawhub",
+      "identifier": "wechat-article-extractor",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:9b423581642a7da0",
+      "install_path": "wechat-article-extractor",
+      "files": [
+        "CHANGELOG.md",
+        "README.md",
+        "scripts/extract_wechat.py",
+        "SKILL.md",
+        "skill.yml",
+        "tests/test_triggers.md",
+        "_meta.json"
+      ],
+      "metadata": {},
+      "installed_at": "2026-06-05T08:30:05.659170+00:00",
+      "updated_at": "2026-06-05T08:30:05.659183+00:00"
+    }
+  }
+}

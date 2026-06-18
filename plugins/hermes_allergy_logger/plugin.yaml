@@ -1,0 +1,33 @@
+name: hermes-allergy-logger
+version: 0.2.0
+description: |
+  Auto-log allergy medication intake. Scans every inbound user message
+  (Feishu, CLI, etc.) for keywords like "过敏药/氯雷他定/西替利嗪/息斯敏";
+  when a real intake event is detected AND dose+symptom are explicitly
+  stated, writes a row to a Feishu Bitable via the OpenClaw gateway
+  (POST /tools/invoke → feishu_bitable_create_record). When fields are
+  missing, injects a reminder into the LLM context to ask the user —
+  never invent data.
+
+config:
+  - key: gateway_url
+    env_var: OPENCLAW_GATEWAY_URL
+    description: OpenClaw gateway HTTP base URL (default http://127.0.0.1:18789)
+    default: http://127.0.0.1:18789
+  - key: gateway_token
+    env_var: OPENCLAW_GATEWAY_TOKEN
+    description: OpenClaw gateway bearer token
+    secret: true
+  - key: app_token
+    env_var: ALLERGY_BITABLE_APP_TOKEN
+    description: 飞书多维表格 app_token
+  - key: table_id
+    env_var: ALLERGY_BITABLE_TABLE_ID
+    description: 飞书多维表格 table_id
+  - key: gateway_timeout
+    env_var: OPENCLAW_GATEWAY_TIMEOUT
+    description: OpenClaw HTTP call timeout in seconds
+    default: 8
+
+hooks:
+  - pre_llm_call

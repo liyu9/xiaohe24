@@ -1,0 +1,20 @@
+{
+  "storage": {
+    "workspace": "/home/ubuntu/.openviking/data"
+  },
+  "embedding": {
+    "dense": {
+      "model": "doubao-embedding",
+      "api_key": "REPLACE_WITH_ARK_KEY",
+      "api_base": "https://ark.cn-beijing.volces.com/api/plan/v3",
+      "provider": "volcengine",
+      "input": "text"
+    }
+  },
+  "vlm": {
+    "model": "REPLACE_WITH_VLM_MODEL",
+    "api_key": "REPLACE_WITH_ARK_KEY",
+    "api_base": "https://ark.cn-beijing.volces.com/api/plan/v3",
+    "provider": "volcengine"
+  }
+}

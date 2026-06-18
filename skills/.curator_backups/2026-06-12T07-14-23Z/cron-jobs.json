@@ -1,0 +1,232 @@
+{
+  "jobs": [
+    {
+      "id": "adf25b63b01d",
+      "name": "xiaohe24-backup-noon",
+      "prompt": "\u6267\u884c xiaohe24 \u8bb0\u5fc6\u5907\u4efd\uff1a\u8dd1 /home/ubuntu/.hermes/scripts/xiaohe24-backup.sh\uff0c\u7136\u540e\u628a\u65e5\u5fd7 tail -30 \u53d1\u6211\uff08\u5982\u679c\u5f53\u5929\u6ca1\u6709\u6539\u52a8\u4e5f\u8981\u53d1\"no changes\"\u72b6\u6001\uff09\u3002\u5982\u679c\u811a\u672c\u9000\u51fa\u7801\u975e 0\uff0c\u8981\u660e\u786e\u544a\u8b66\u3002\u5b8c\u6210\u540e\u4e0d\u8981\u505a\u5176\u4ed6\u4e8b\u60c5\uff0c\u4e0d\u8981\u95ee\u540e\u7eed\u95ee\u9898\u3002",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "schedule_display": "0 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 6
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-06-10T13:55:13.676889+08:00",
+      "paused_reason": null,
+      "created_at": "2026-06-04T12:56:33.697303+08:00",
+      "next_run_at": "2026-06-11T12:00:00+08:00",
+      "last_run_at": "2026-06-10T12:01:04.110072+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "feishu",
+        "chat_id": "oc_d9fd947c6da67b7d745527255702aede",
+        "chat_name": "oc_d9fd947c6da67b7d745527255702aede",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "587075ad5157",
+      "name": "xiaohe24-backup-evening",
+      "prompt": "\u6267\u884c xiaohe24 \u8bb0\u5fc6\u5907\u4efd\uff1a\u8dd1 /home/ubuntu/.hermes/scripts/xiaohe24-backup.sh\uff0c\u7136\u540e\u628a\u65e5\u5fd7 tail -30 \u53d1\u6211\uff08\u5982\u679c\u5f53\u5929\u6ca1\u6709\u6539\u52a8\u4e5f\u8981\u53d1\"no changes\"\u72b6\u6001\uff09\u3002\u5982\u679c\u811a\u672c\u9000\u51fa\u7801\u975e 0\uff0c\u8981\u660e\u786e\u544a\u8b66\u3002\u5b8c\u6210\u540e\u4e0d\u8981\u505a\u5176\u4ed6\u4e8b\u60c5\uff0c\u4e0d\u8981\u95ee\u540e\u7eed\u95ee\u9898\u3002",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "display": "0 21 * * *"
+      },
+      "schedule_display": "0 21 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 8
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-04T12:56:34.702573+08:00",
+      "next_run_at": "2026-06-12T21:00:00+08:00",
+      "last_run_at": "2026-06-11T21:01:19.801835+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "feishu",
+        "chat_id": "oc_d9fd947c6da67b7d745527255702aede",
+        "chat_name": "oc_d9fd947c6da67b7d745527255702aede",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "0af2e4548e66",
+      "name": "hermes-daily-report-18pm",
+      "prompt": "\u6267\u884c\u6bcf\u65e5 18:00 Hermes \u72b6\u6001\u65e5\u62a5\uff1a\u8dd1 `python3 /home/ubuntu/.hermes/scripts/daily-report.py` \u5e76\u628a stdout \u5b8c\u6574\u539f\u6587\uff08\u5e26 markdown \u683c\u5f0f\uff09\u53d1\u6211\u3002\u4e0d\u8981\u4fee\u6539\u5185\u5bb9\uff0c\u4e0d\u8981\u603b\u7ed3\uff0c\u4e0d\u8981\u5220\u4efb\u4f55\u5b57\u6bb5\u3002\u5982\u679c\u811a\u672c\u5931\u8d25\uff08exit code != 0\uff09\u8981\u660e\u786e\u544a\u8b66\u5e76\u8d34 stderr\u3002\u5b8c\u6210\u540e\u4e0d\u8981\u505a\u5176\u4ed6\u4e8b\u60c5\u3002",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * *",
+        "display": "0 18 * * *"
+      },
+      "schedule_display": "0 18 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 8
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-04T13:23:41.420425+08:00",
+      "next_run_at": "2026-06-12T18:00:00+08:00",
+      "last_run_at": "2026-06-11T18:00:56.312087+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "feishu",
+        "chat_id": "oc_d9fd947c6da67b7d745527255702aede",
+        "chat_name": "oc_d9fd947c6da67b7d745527255702aede",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "674851dd76b6",
+      "name": "stock-watch-intraday",
+      "prompt": "\u76f4\u63a5\u8c03\u7528 `python3 /home/ubuntu/.hermes/scripts/stock-watch.py intraday`, \u628a stdout \u5b8c\u6574\u8f6c\u7ed9\u6211 (\u5305\u62ec SEND \u5757)\u3002\u4e0d\u8981\u505a\u5176\u4ed6\u4efb\u4f55\u4e8b\u3002",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9-15 * * 1-5",
+        "display": "0 9-15 * * 1-5"
+      },
+      "schedule_display": "0 9-15 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 67
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-06-09T13:01:23.219419+08:00",
+      "paused_reason": null,
+      "created_at": "2026-06-08T13:13:15.336008+08:00",
+      "next_run_at": "2026-06-09T14:00:00+08:00",
+      "last_run_at": "2026-06-09T13:01:17.944835+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "weixin",
+        "chat_id": "o9cq80-BaoESPrrfWFrRSNmlqBzg@im.wechat",
+        "chat_name": null,
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "cf7105eb1042",
+      "name": "stock-watch-close",
+      "prompt": "\u76f4\u63a5\u8c03\u7528 `python3 /home/ubuntu/.hermes/scripts/stock-watch.py close`, \u628a stdout \u5b8c\u6574\u8f6c\u7ed9\u6211 (\u5305\u62ec SEND \u5757)\u3002\u4e0d\u8981\u505a\u5176\u4ed6\u4efb\u4f55\u4e8b\u3002",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 15 * * 1-5",
+        "display": "30 15 * * 1-5"
+      },
+      "schedule_display": "30 15 * * 1-5",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-08T13:13:16.345580+08:00",
+      "next_run_at": "2026-06-12T15:30:00+08:00",
+      "last_run_at": "2026-06-11T15:31:33.117257+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": "delivery error: Weixin send failed: iLink sendmessage rate limited: ret=-2 errcode=None errmsg=rate limited",
+      "deliver": "origin",
+      "origin": {
+        "platform": "weixin",
+        "chat_id": "o9cq80-BaoESPrrfWFrRSNmlqBzg@im.wechat",
+        "chat_name": null,
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-06-11T21:01:19.802439+08:00"
+}

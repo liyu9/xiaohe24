@@ -1,0 +1,36 @@
+{
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "defaultAccount": "default",
+      "appId": "cli_REPLACE_ME",
+      "appSecret": "REPLACE_ME_32_CHAR_SECRET",
+      "domain": "feishu",
+      "connectionMode": "websocket",
+      "renderMode": "auto",
+      "accounts": {
+        "default": {
+          "enabled": true,
+          "name": "主人",
+          "appId": "cli_REPLACE_ME",
+          "appSecret": "REPLACE_ME_32_CHAR_SECRET",
+          "domain": "feishu",
+          "connectionMode": "websocket"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "bind": "loopback",
+    "port": 18789,
+    "auth": {
+      "mode": "token",
+      "token": "REPLACE_LOCAL_LOOPBACK_TOKEN"
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.6.1",
+    "lastTouchedAt": "2026-06-06T00:00:00.000Z"
+  }
+}

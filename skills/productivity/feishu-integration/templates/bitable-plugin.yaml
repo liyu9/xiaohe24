@@ -1,0 +1,29 @@
+name: <plugin-name>
+version: 0.1.0
+description: |
+  Auto-log <event> when the user mentions it in chat. Writes a row to
+  a Feishu Bitable via the OpenClaw gateway. Asks the user for any
+  missing load-bearing fields rather than guessing.
+
+config:
+  - key: gateway_url
+    env_var: OPENCLAW_GATEWAY_URL
+    description: OpenClaw gateway HTTP base URL
+    default: http://127.0.0.1:18789
+  - key: gateway_token
+    env_var: OPENCLAW_GATEWAY_TOKEN
+    description: OpenClaw gateway bearer token
+    secret: true
+  - key: app_token
+    env_var: BITABLE_APP_TOKEN
+    description: 飞书多维表格 app_token
+  - key: table_id
+    env_var: BITABLE_TABLE_ID
+    description: 飞书多维表格 table_id
+  - key: gateway_timeout
+    env_var: OPENCLAW_GATEWAY_TIMEOUT
+    description: OpenClaw HTTP call timeout in seconds
+    default: 8
+
+hooks:
+  - pre_llm_call

@@ -1,1 +1,48 @@
 *.lock
+
+# === 6-18 added: hard blacklist ===
+# OAuth multi-account + webhook credentials (NEVER sync)
+auth.json
+feishu_credentials.json
+
+# Databases + WAL (binary, will bloat repo)
+*.db
+*.db-wal
+*.db-shm
+
+# Caches (regeneratable, no need to version)
+image_cache/
+models_dev_cache.json
+.cache/
+__pycache__/
+*.pyc
+
+# Source code repo (can re-clone from upstream)
+hermes-agent/
+sandboxes/
+
+# Python virtualenvs (huge, rebuildable)
+**/venv/
+**/.venv/
+**/site-packages/
+**/__pycache__/
+**/*.egg-info/
+
+# Lock files + transient state
+*.lock
+*.pid
+gateway.lock
+gateway.pid
+gateway_state.json
+processes.json
+state.db-journal
+auth.lock
+kanban.db.init.lock
+
+# Sandboxes
+sandbox_*/
+*.sandbox
+
+# Logs
+logs/
+*.log

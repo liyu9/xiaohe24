@@ -1,0 +1,47 @@
+{
+  "_description": "告警卡片（红色 header + 故障详情 + 按钮组）。支持 Python 变量替换 {TITLE}/{SEVERITY}/{DESCRIPTION}/{TIME}/{BUTTON_URL}/{BUTTON_LABEL}。",
+  "_usage": "把 JSON 用 Python json.load 后修改字段，再发出去。",
+  "msg_type": "interactive",
+  "card": {
+    "config": {"wide_screen_mode": true},
+    "header": {
+      "title": {"content": "🚨 {TITLE}", "tag": "plain_text"},
+      "template": "red"
+    },
+    "elements": [
+      {"tag": "hr"},
+      {
+        "tag": "markdown",
+        "content": "**告警等级：** <font color='red'>{SEVERITY}</font>\n**告警时间：** {TIME}\n**告警来源：** MiniMax 监控\n**Trace ID：** {TRACE_ID}"
+      },
+      {"tag": "hr"},
+      {
+        "tag": "markdown",
+        "content": "**详情：**\n{DESCRIPTION}"
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {"tag": "plain_text", "content": "本卡片由 Hermes 飞书卡片工具自动发出"}
+        ]
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {"tag": "plain_text", "content": "📊 查看监控"},
+            "type": "primary",
+            "url": "{BUTTON_URL}"
+          },
+          {
+            "tag": "button",
+            "text": {"tag": "plain_text", "content": "✅ 认领处理"},
+            "type": "default",
+            "value": {"action": "ack", "alert_id": "{ALERT_ID}"}
+          }
+        ]
+      }
+    ]
+  }
+}
